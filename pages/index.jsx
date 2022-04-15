@@ -22,6 +22,10 @@ export default function Home() {
   };
 
   useEffect(() => {
+    /**
+     * Usamos este useEffect para solo cargar el dashboard de lado del cliente
+     * Asi evitamos errores por intentar cargar de lado del server
+     */
     const uppyInstance = new Uppy({
       restrictions: {
         maxNumberOfFiles: 1, // para que solo pueda subir una imagen

@@ -9,8 +9,13 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@uppy/core": "^2.1.8",
+    "@uppy/dashboard": "^2.1.4",
+    "@uppy/react": "^2.1.2",
+    "@uppy/transloadit": "^2.1.4",
+    "@uppy/webcam": "^2.1.0",
     "next": "12.1.4",
-    "react": "18.0.0",
+    "react": "^18.0.0",
     "react-dom": "18.0.0"
   },
   "devDependencies": {

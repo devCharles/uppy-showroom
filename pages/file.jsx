@@ -14,9 +14,6 @@ export default function Home() {
     const image = assembly.results?.compress_image[0].ssl_url; // tomamos la url de la imagen subida a s3
 
     setImageUrl(image); // guardamos la url de la imagen en el estado para poder usarla como y cuando queramos
-
-    uppy.reset(); // limpiamos la instancia de uppy
-
     setIsUploadingFile(false); // cambiaos el estado para mostrar un mensaje diferente
   };
 
@@ -26,6 +23,7 @@ export default function Home() {
     const file = Array.from(event.target.files)[0] || null; // tomamos el archivo del input
 
     if (file) {
+      uppy.reset(); // limpiamos la instancia de uppy
       // agregamos manualmente el archivo a uppy
       uppy.addFile({
         name: file.name,
